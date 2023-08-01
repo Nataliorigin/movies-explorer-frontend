@@ -1,0 +1,6 @@
+.header__button-account-pic {
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    background: #F9F9F9 url("../../../images/icon__COLOR_icon-main.svg") center no-repeat;
+}
