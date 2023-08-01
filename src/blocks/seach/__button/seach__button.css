@@ -1,0 +1,40 @@
+.seach__button {
+  min-width: 44px;
+  min-height: 44px;
+  background: #2BE080;
+  border-radius: 8px;
+  border: none;
+  opacity: 1;
+  transition: 1s;
+  display: inline-block;
+  position: relative;
+}
+
+.seach__button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.seach__button::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 30px;
+  background: white;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+}
+
+.seach__button::after {
+  display: inline-block;
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-right: 3px solid white;
+  border-top: 3px solid white;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 16px;
+  right: 19px;
+}

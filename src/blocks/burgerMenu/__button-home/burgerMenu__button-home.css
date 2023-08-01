@@ -1,0 +1,12 @@
+.burgerMenu__button-home {
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  opacity: 1;
+  transition: 1s;
+}
+
+.burgerMenu__button-home:hover {
+  opacity: 0.8;
+}

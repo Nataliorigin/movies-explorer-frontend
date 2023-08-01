@@ -1,0 +1,23 @@
+.footer__info {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 56px;
+}
+
+@media screen and (max-width: 1279px){
+  .footer__info {
+    max-width: 708px;
+    margin-top: 4px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .footer__info {
+    max-width: 708px;
+    margin-top: 0;
+    flex-direction: column-reverse;
+  }
+}
