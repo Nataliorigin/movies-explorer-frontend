@@ -21,12 +21,12 @@ function AboutProject() {
           <p className='about__block-tech'>Back-end</p>
         </li>
         <li className='about__block-item'>
-          <p className='about__block-time about__block-time_grey'>1 неделя</p>
+          <p className='about__block-time about__block-time_grey'>4 недели</p>
           <p className='about__block-tech'>Front-end</p>
         </li>
       </ul>
     </section>
   );
-};
+}
 
 export default AboutProject;
