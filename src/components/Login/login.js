@@ -5,6 +5,7 @@ import Logo from '../../images/logo.svg';
 function Login() {
   return (
     <>
+      <main>
       <section className="login">
         <div className="login__header">
         <NavLink className="login__logo-link" exact to="/">
@@ -28,6 +29,7 @@ function Login() {
           <Link to='/signup' className="login__link">Регистрация</Link>
         </div>
       </section>
+      </main>
     </>
   );
 }

@@ -31,7 +31,7 @@ function MoviesCardList({isInFavourites}) {
     setNewCards(card.id, newCard);
   }
 
-  const moreButtonClasses = isInFavourites ? "card__button-more_disable" : "card__button-more";
+  const moreButtonClasses = isInFavourites ? "cards-container__button-more cards-container__button-more_disable" : "cards-container__button-more";
 
   const renderCard = (card) => {
     if (!isInFavourites || card.isSaved) {
@@ -40,13 +40,15 @@ function MoviesCardList({isInFavourites}) {
   }
 
   return (
-    <section>
+    <main>
+    <section className="cards-container">
       <ul className="cards">
         {cards.map(renderCard)}
       </ul>
       <button className={moreButtonClasses} title="Ещё">Ещё</button>
     </section>
+    </main>
   );
-};
+}
 
 export default MoviesCardList;

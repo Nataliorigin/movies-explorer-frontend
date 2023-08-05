@@ -6,6 +6,7 @@ import logo from '../../images/logo.svg';
 function Register() {
   return (
     <>
+      <main>
       <section className="register">
         <div className="register__header">
           <NavLink className="register__logo-link" exact to="/">
@@ -34,8 +35,9 @@ function Register() {
           <Link to='/signin' className="register__link">Войти</Link>
         </div>
       </section>
+      </main>
     </>
   );
-};
+}
 
 export default Register;

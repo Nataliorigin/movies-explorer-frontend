@@ -5,9 +5,10 @@ function Profile() {
   //const []
   return (
     <>
+      <main>
       <section className="profile">
         <h1 className="profile__title">Привет, Наталья!</h1>
-        <form className="profile__person" novalidate>
+        <form className="profile__person" noValidate>
           <label className="profile__input-area">
             <span className="profile__text">Имя</span>
             <input type="text" name="personName" className="profile__input" placeholder='Наталья' required />
@@ -20,9 +21,10 @@ function Profile() {
           <button type="button" className="profile__button-exit">Выйти из аккаунта</button>
         </form>
       </section>
+      </main>
     </>
   );
-};
+}
 
 export default Profile;
 

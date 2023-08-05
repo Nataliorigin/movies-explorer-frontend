@@ -8,9 +8,8 @@ import Login from '../Login/login';
 import Register from '../Register/register';
 import Profile from '../Profile/profile';
 import PageNotFound from '../PageNotFound/pageNotFound';
-import SearchForm from '../Movies/SearchForm/searchForm';
-import MoviesCardList from '../Movies/MoviesCardList/moviesCardList';
 import SavedMovies from '../SavedMovies/savedMovies';
+import Movies from "../Movies/movies";
 
 function App() {
   return (
@@ -25,8 +24,7 @@ function App() {
 
           <Route exact path="/movies">
             <Header/>
-            <SearchForm/>
-            <MoviesCardList isInFavourites={false}/>
+            <Movies/>
             <Footer/>
           </Route>
 
@@ -46,6 +44,7 @@ function App() {
           <Route path="/saved-movies">
             <Header/>
             <SavedMovies/>
+            <Footer/>
           </Route>
 
           <Route path="*">

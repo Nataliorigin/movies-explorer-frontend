@@ -6,12 +6,13 @@ import Footer from "../Footer/footer";
 
 function SavedMovies() {
   return (
+    <main>
     <section className="saved-movies">
       <SearchForm/>
       <MoviesCardList isInFavourites={true}/>
-      <Footer/>
     </section>
+    </main>
   );
-};
+}
 
 export default SavedMovies;
