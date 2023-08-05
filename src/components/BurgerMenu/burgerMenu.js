@@ -13,10 +13,10 @@ function BurgerMenu({isOpen, onClose}) {
         <NavLink to="/saved-movies" activeClassName="burgerMenu__link_active" className="burgerMenu__link">Сохраненые фильмы</NavLink>
       </nav>
       <Link className="burgerMenu__link-home" to="/profile">
-        <button type="button" className="burgerMenu__button-home">Аккаунт</button><div className="burgerMenu__button-home-pic"></div>
+        <span className="burgerMenu__button-home">Аккаунт</span><div className="burgerMenu__button-home-pic"></div>
       </Link>
     </div>
   );
-};
+}
 
 export default BurgerMenu;

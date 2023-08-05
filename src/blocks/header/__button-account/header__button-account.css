@@ -1,8 +1,6 @@
 .header__button-account {
   background: #FFFFFF;
-
   border: none;
-  padding: 0;
   font-family: 'Inter', Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -12,7 +10,10 @@
   cursor: pointer;
   opacity: 1;
   transition: 1s;
-margin-right: 7px;
+  margin-right: 4px;
+  text-decoration: none;
+  margin-left: 11px;
+  padding: 0;
 }
 
 .header__button-account:hover {

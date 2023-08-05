@@ -1,4 +1,8 @@
-@media screen and (max-width:767px){
+.header__login {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 767px) {
   .header__login {
     padding-right: 4px;
   }

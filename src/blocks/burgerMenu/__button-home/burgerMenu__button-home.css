@@ -1,12 +1,24 @@
 .burgerMenu__button-home {
+  font-family: 'Inter', Arial, sans-serif;
   background-color: #FFFFFF;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   opacity: 1;
   transition: 1s;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 12px;
+  color: #000000;
+  margin-right: 4px;
+  text-decoration: none;
+  margin-left: 11px;
+  padding: 0;
 }
 
 .burgerMenu__button-home:hover {
   opacity: 0.8;
 }
+
+
