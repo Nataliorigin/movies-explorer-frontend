@@ -1,4 +1,4 @@
-import { React } from "react";
+import {React} from "react";
 import './moviesCard.css';
 import CardImage from '../../../images/pic-1.png';
 
@@ -6,9 +6,9 @@ function MoviesCard({card, isInFavourites, isSaved, onCardSave}) {
 
   const useButtonClassName = (() => {
     if (isInFavourites) {
-      return 'card__button_delete';
+      return 'card__button card__button_delete';
     } else if (isSaved) {
-      return 'card__button_save';
+      return 'card__button card__button_save';
     } else {
       return 'card__button';
     }
@@ -21,7 +21,7 @@ function MoviesCard({card, isInFavourites, isSaved, onCardSave}) {
   return (
 
     <li className="card">
-      <img src={CardImage} alt="Девушка с детьми" className="card__photo" />
+      <img src={CardImage} alt="Девушка с детьми" className="card__photo"/>
       <div className="card__group">
         <div className="card__title">
           <h3 className="card__name">33 слова о дизайне</h3>
@@ -31,6 +31,6 @@ function MoviesCard({card, isInFavourites, isSaved, onCardSave}) {
       </div>
     </li>
   );
-};
+}
 
 export default MoviesCard;

@@ -18,7 +18,7 @@ function Header() {
     return currentPath;
   };
 
-  const backgroundColor = useFindPath() === '/' ? 'header header__color' : 'header';
+  const backgroundColor = useFindPath() === '/' ? 'header header_pink' : 'header';
 
   function handleBurgerMenuClick() {
     setBurgerMenuOpened(true);
@@ -31,7 +31,7 @@ function Header() {
   return (
     <header className={backgroundColor}>
       <div className='header__container'>
-        <NavLink className="header__logolink"  activeClassName="header__logolink-active" exact to="/">
+        <NavLink className="header__logo-link"  activeClassName="header__logo-link_active" exact to="/">
           <img className="header__logo" src={Logo} alt="Логотип"/>
         </NavLink>
 
@@ -40,28 +40,28 @@ function Header() {
             <div className="header__auth">
               <Link className="header__registry" to="/signup">Регистрация</Link>
               <Link className="header__login" to="/signin">
-                <button className="header__link" type="button" aria-label="Войти" title="Войти">Войти</button>
+                <span  className="header__link" title="Войти">Войти</span >
               </Link>
             </div>
           </Route>
 
           <Route exact path={["/movies", "/saved-movies", "/profile"]}>
             <div className="header__nav">
-              <NavLink className="header__nav_films" activeClassName="header__nav_films-active" to="/movies">Фильмы</NavLink>
-              <NavLink className="header__nav_films" activeClassName="header__nav_films-active" to="/saved-movies">Сохранённые фильмы</NavLink>
+              <NavLink className="header__films" activeClassName="header__films_active" to="/movies">Фильмы</NavLink>
+              <NavLink className="header__films" activeClassName="header__films_active" to="/saved-movies">Сохранённые фильмы</NavLink>
             </div>
             <div className="header__profile">
               <Link className="header__link-account" to="/profile">
-                <button type="button" className="header__button-account" title="Аккаунт">Аккаунт</button><div className="header__button-account-pic"></div>
+                <span  className="header__button-account" title="Аккаунт">Аккаунт</span><div className="header__button-account-pic"></div>
               </Link>
             </div>
-            <button type="button" className="header__burgerButton" title="Меню" onClick={handleBurgerMenuClick}><img src={IconBurgerMenu} className="header__burgerMenu_img" alt="Меню"/></button>
+            <button type="button" className="header__burgerButton" title="Меню" onClick={handleBurgerMenuClick}><img src={IconBurgerMenu} className="header__burgerButton-img" alt="Меню"/></button>
             <BurgerMenu isOpen={isBurgerMenuOpened} onClose={handleBurgerMenuClose}/>
           </Route>
         </Switch>
       </div>
     </header>
   );
-};
+}
 
 export default Header;

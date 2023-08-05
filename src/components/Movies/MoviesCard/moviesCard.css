@@ -1,6 +1,4 @@
 @import url(../../../blocks/cards/card/card.css);
-@import url(../../../blocks/cards/card/__button-more/card__button-more.css);
-@import url(../../../blocks/cards/card/__button-more/_disable/card__button-more_disable.css);
 @import url(../../../blocks/cards/card/__button/card__button.css);
 @import url(../../../blocks/cards/card/__duration/card__duration.css);
 @import url(../../../blocks/cards/card/__group/card__group.css);

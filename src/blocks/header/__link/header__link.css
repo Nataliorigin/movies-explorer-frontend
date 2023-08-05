@@ -2,8 +2,6 @@
   background: #2BE080;
   border-radius: 3px;
   border: none;
-  min-width: 76px;
-  min-height: 32px;
   font-family: 'Inter', Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -11,6 +9,9 @@
   line-height: 16px;
   opacity: 1;
   transition: 1s;
+  padding: 8px 20px;
+  text-decoration: none;
+  color: black;
 }
 
 .header__link:hover {
@@ -20,7 +21,7 @@
 
 @media screen and (max-width: 767px){
   .header__link {
-    min-width: 54px;
-    min-height: 26px;
+    padding: 5px 12px;
+    font-size: 10px;
   }
 }

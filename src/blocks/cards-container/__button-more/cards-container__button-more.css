@@ -1,4 +1,4 @@
-.card__button-more {
+.cards-container__button-more {
   min-width: 320px;
   min-height: 36px;
   font-family: 'Inter', Arial, sans-serif;
@@ -19,19 +19,19 @@
   transition: 1s;
 }
 
-.card__button-more :hover {
+.cards-container__button-more :hover {
   opacity: 0.8;
 }
 
 @media screen and (max-width: 1279px){
-  .card__button-more {
+  .cards-container__button-more {
     margin-top: 50px;
     font-size: 12px;
   }
 }
 
 @media screen and (max-width: 767px){
-  .card__button-more {
+  .cards-container__button-more {
     min-width: 240px;
     font-size: 12px;
     line-height: 15px;

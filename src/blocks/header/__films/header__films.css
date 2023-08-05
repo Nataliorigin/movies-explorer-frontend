@@ -1,4 +1,4 @@
-.header__nav_films {
+.header__films {
   font-family: 'Inter', Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -12,7 +12,7 @@
 
 }
 
-.header__nav_films:last-child {
+.header__films:last-child {
   margin-right: 0;
   margin-left: 0;
 }
