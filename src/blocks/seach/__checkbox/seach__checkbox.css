@@ -1,0 +1,26 @@
+.seach__checkbox {
+  appearance: none;
+  max-height: 20px;
+  min-width: 36px;
+  border-radius: 1em;
+  box-shadow: 0 4px 4px rgba(50, 50, 71, 0.08), 0 4px 8px rgba(50, 50, 71, 0.06), inset -16px 0 0 0 white;
+  background-color: #EBEBEB;
+  border: 2px solid white;
+  outline: none;
+  transition: 0.2s;
+  margin-right: 12px;
+}
+
+.seach__checkbox:checked {
+  border-radius: 1em;
+  box-shadow: 0 4px 4px rgba(50, 50, 71, 0.08), 0 4px 8px rgba(50, 50, 71, 0.06), inset 16px 0 0 0 white;
+  background-color: #2BE080;
+  border: 2px solid white;
+  outline: none;
+  transition: 0.2s;
+  margin-right: 12px;
+}
+
+.seach__checkbox:focus {
+    outline-width: 0;
+}

@@ -1,0 +1,25 @@
+.promo__container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 75px;
+  position: relative;
+}
+
+@media screen and (max-width:1279px) {
+  .promo__container {
+    padding-top: 0;
+    max-width: 680px;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .promo__container {
+    padding-top: 70px;
+    max-width: none;
+    width: 100%;
+    overflow: hidden;
+  }
+}

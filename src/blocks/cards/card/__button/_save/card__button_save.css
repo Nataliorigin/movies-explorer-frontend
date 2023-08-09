@@ -1,0 +1,11 @@
+.card__button_save {
+  background: url('../../../../../images/button-save.svg') 50% no-repeat;
+  border-style: none;
+  cursor: pointer;
+  margin-right: 12px;
+  margin-top: 14px;
+  opacity: 1;
+  transition: 1s;
+  width: 32px;
+  height: 32px;
+}

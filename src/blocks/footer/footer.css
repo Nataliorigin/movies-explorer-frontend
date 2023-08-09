@@ -1,0 +1,11 @@
+.footer {
+  background-color: #FAFAFA;
+  margin: 0 auto;
+  margin-right: 0px;
+}
+
+@media screen and (max-width: 1279px) {
+  .footer {
+    background-color: #ffffff;
+  }
+}

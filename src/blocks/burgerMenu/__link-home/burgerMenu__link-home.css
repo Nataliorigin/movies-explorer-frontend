@@ -1,0 +1,27 @@
+.burgerMenu__link-home {
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  min-width: 100px;
+  min-height: 32px;
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 90px;
+  right: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width:767px){
+  .burgerMenu__link-home {
+    margin-bottom: 115px;
+    right: 34%;
+  }
+}
+

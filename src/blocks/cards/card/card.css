@@ -1,0 +1,24 @@
+.card {
+  background-color: #fff;
+  min-width: 270px;
+  min-height: 218px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 1279px){
+  .card {
+    min-width: 339px;
+    max-height: 257px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .card {
+    min-width: 300px;
+    min-height: 237px;
+  }
+}

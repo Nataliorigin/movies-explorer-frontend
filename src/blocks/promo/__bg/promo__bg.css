@@ -1,0 +1,34 @@
+.promo__bg {
+  background: url(../../../images/text__COLOR_landing-logo.svg) no-repeat right bottom;
+  height: 346px;
+  width: 339px;
+  position: absolute;
+  top: 75px;
+  right: 0;
+  object-fit: cover;
+}
+
+@media screen and (max-width:1279px) {
+  .promo__bg {
+    padding-top: 140px;
+    position: static;
+    width: 310px;
+    height: 304px;
+    background-size: auto 304px;
+    background-position: top center;
+  }
+  .promo__bg:nth-child(4) {
+    order: -1;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .promo__bg {
+    padding-top: 0;
+    position: static;
+    background-size: auto 206px;
+    background-position: top center;
+    height: 206px;
+    width: 210px;
+  }
+}
