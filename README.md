@@ -15,3 +15,5 @@
 ## Frontend https://movieManiaHub.nomoredomains.work
 
 ## Backend https://api.movieManiaHub.nomoredomains.work
+
+## Pull request https://github.com/Nataliorigin/movies-explorer-frontend/pull/2
