@@ -1,4 +1,4 @@
-.profile__button-edit {
+.profile__success-message {
   font-family: 'Inter', Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -6,28 +6,24 @@
   line-height: 16px;
   min-width: 410px;
   margin: 0 auto;
-  background-color: white;
-  border: none;
-  cursor: pointer;
-  opacity: 1;
-  transition: 1s;
+  margin-top: 189px;
+  color: rgba(43, 224, 128, 1);
+  text-align: center;
+  visibility: hidden;
+  display: block;
+  min-height: 32px;
 }
-
-.profile__button-edit:hover {
-  opacity: 0.7;
-}
-
 @media screen and (max-width:1279px) {
-  .profile__button-edit {
+  .profile__success-message {
     margin-top: 170px;
   }
 }
 
 @media screen and (max-width:767px) {
-  .profile__button-edit {
+  .profile__success-message {
     min-width: 260px;
     margin-top: 340px;
-    font-size: 12px;
+    font-size: 10px;
     line-height: 15px;
   }
 }
