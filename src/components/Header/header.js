@@ -5,7 +5,7 @@ import Logo from '../../images/logo.svg';
 import IconBurgerMenu from '../../images/icon-burgerMenu.svg';
 import BurgerMenu from '../BurgerMenu/burgerMenu';
 
-function Header({loggedIn}) {
+function Header({loggedIn, setErrorMessage}) {
   const [isBurgerMenuOpened, setBurgerMenuOpened] = useState(false);
 
   const useFindPath = () => {
@@ -16,6 +16,10 @@ function Header({loggedIn}) {
     }, [location]);
     return currentPath;
   };
+
+  function cleanErrorMessage() {
+    setErrorMessage('');
+  }
 
   const backgroundColor = useFindPath() === '/' ? 'header header_pink' : 'header';
 
@@ -35,8 +39,8 @@ function Header({loggedIn}) {
             <img className="header__logo" src={Logo} alt="Логотип"/>
           </NavLink>
           <div className="header__auth">
-            <Link className="header__registry" to="/signup">Регистрация</Link>
-            <Link className="header__login" to="/signin">
+            <Link className="header__registry" to="/signup" onClick={cleanErrorMessage}>Регистрация</Link>
+            <Link className="header__login" to="/signin" onClick={cleanErrorMessage}>
               <span className="header__link" title="Войти">Войти</span>
             </Link>
           </div>

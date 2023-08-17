@@ -30,7 +30,7 @@ function Movies({type, isLoading, cards, refreshCards, handleCardSave, handleCar
   }
 
   return (
-    <div className="movies">
+    <>
       <Header loggedIn={true}/>
       <main>
         <SearchForm key={`${type}-search-form`} type={`${type}-search-form`} searchValue={searchValue}
@@ -50,7 +50,7 @@ function Movies({type, isLoading, cards, refreshCards, handleCardSave, handleCar
         })()}
       </main>
       <Footer/>
-    </div>);
+    </>);
 }
 
 export default Movies;

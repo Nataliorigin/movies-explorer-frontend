@@ -22,11 +22,13 @@ function Profile({onUpdateUser, onLogout, errorMessage, setErrorMessage, success
   }
 
   function handleChangeName(evt) {
+    setIsEditMode(true);
     handleChange(evt);
     cleanErrorMessage();
   }
 
   function handleChangeEmail(evt) {
+    setIsEditMode(true);
     handleChange(evt);
     cleanErrorMessage();
   }
@@ -64,15 +66,25 @@ function Profile({onUpdateUser, onLogout, errorMessage, setErrorMessage, success
             <p className='profile__error'>{errors.personName}</p>
             <label className="profile__input-area">
               <span className="profile__text">E-mail</span>
-              <input type="text" name="personEmail" className="profile__input" value={values.personEmail || ""} onChange={handleChangeEmail} placeholder='Email'
-                     minLength={5} maxLength={30} pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required disabled={!isEditMode} />
+              <input type="text" name="personEmail" className="profile__input" value={values.personEmail || ""}
+                     onChange={handleChangeEmail} placeholder='Email'
+                     minLength={5} maxLength={30} pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required
+                     disabled={!isEditMode}/>
             </label>
             <p className='profile__error'>{errors.personEmail}</p>
-            <p className={`profile__error-message ${errorMessage && 'profile__error-message_visible'}`}>{errorMessage}</p>
-            <p className={`profile__success-message ${successMessage && 'profile__success-message_visible'}`}>{successMessage}</p>
-            <button type="button" className={`profile__button-edit ${!isEditMode || 'profile__button-visible'}`} onClick={clickEditButton} >Редактировать</button>
-            <button type="submit" className={`profile__button-save_disable ${isValid && isChanged && 'profile__button-save'} ${isEditMode || 'profile__button-visible'}`} >Сохранить</button>
-            <button type="button" className={`profile__button-exit ${!isEditMode || 'profile__button-visible'}`} onClick={signOut}>Выйти из аккаунта</button>
+            <p
+              className={`profile__error-message ${errorMessage && 'profile__error-message_visible'}`}>{errorMessage}</p>
+            <p
+              className={`profile__success-message ${successMessage && 'profile__success-message_visible'}`}>{successMessage}</p>
+            <button type="button" className={`profile__button-edit ${!isEditMode || 'profile__button-visible'}`}
+                    onClick={clickEditButton}>Редактировать
+            </button>
+            <button type="submit"
+                    className={`profile__button-save_disable ${isValid && isChanged && 'profile__button-save'} ${isEditMode || 'profile__button-visible'}`}>Сохранить
+            </button>
+            <button type="button" className={`profile__button-exit ${!isEditMode || 'profile__button-visible'}`}
+                    onClick={signOut}>Выйти из аккаунта
+            </button>
           </form>
         </section>
       </main>

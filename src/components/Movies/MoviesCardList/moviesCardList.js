@@ -2,8 +2,8 @@ import {React, useEffect, useState} from "react";
 import './moviesCardList.css';
 import MoviesCard from '../MoviesCard/moviesCard';
 import {
+  BREAKPOINT_1278,
   BREAKPOINT_480,
-  BREAKPOINT_768,
   MOVIES_TO_LOAD_2,
   MOVIES_TO_LOAD_4,
   VISIBLE_MOVIES_16,
@@ -30,7 +30,7 @@ function MoviesCardList({isInFavourites, cards, handleCardSave, handleCardRemove
     if (windowWidth <= BREAKPOINT_480) {
       showedCardsCountAtOnce = VISIBLE_MOVIES_5;
       setMoviesToLoad(MOVIES_TO_LOAD_2);
-    } else if (windowWidth <= BREAKPOINT_768) {
+    } else if (windowWidth <= BREAKPOINT_1278) {
       showedCardsCountAtOnce = VISIBLE_MOVIES_8;
       setMoviesToLoad(MOVIES_TO_LOAD_2);
     } else {
@@ -56,20 +56,18 @@ function MoviesCardList({isInFavourites, cards, handleCardSave, handleCardRemove
 
   const renderCard = (card) => {
     return <MoviesCard card={card} key={card.movieId} isInFavourites={isInFavourites} isSaved={card.isSaved}
-                      onCardSave={handleCardSave} onCardRemove={handleCardRemove}></MoviesCard>
+                       onCardSave={handleCardSave} onCardRemove={handleCardRemove}></MoviesCard>
   }
 
   return (
-    <main>
-      <section>
-        <ul className="cards">
-          {showedCards.map(renderCard)}
-        </ul>
-        <button className={(showedCards.length < cards.length ? moreButtonClassVisible : moreButtonClassHidden)}
-                title="Ещё" onClick={addShowedCards}>Ещё
-        </button>
-      </section>
-    </main>
+    <section>
+      <ul className="cards">
+        {showedCards.map(renderCard)}
+      </ul>
+      <button className={(showedCards.length < cards.length ? moreButtonClassVisible : moreButtonClassHidden)}
+              title="Ещё" onClick={addShowedCards}>Ещё
+      </button>
+    </section>
   );
 }
 

@@ -52,7 +52,7 @@ function App() {
     const jwt = localStorage.getItem('jwt');
     if (jwt) {
       authApi.getUserAuth(jwt)
-        .then((data) => {
+        .then(() => {
           setLoggedIn(true);
         })
         .catch((err) => {
@@ -71,7 +71,7 @@ function App() {
       .then(() => {
         onLogin(password, email);
       })
-      .catch((err) => {
+      .catch(() => {
         if (409) {
           setErrorMessage('Пользователь с таким email уже существует');
         } else {
@@ -88,7 +88,7 @@ function App() {
         setLoggedIn(true);
         setErrorMessage('');
       })
-      .catch((err) => {
+      .catch(() => {
         if (401) {
           setErrorMessage('Неправильные почта или пароль');
         } else {
@@ -113,7 +113,7 @@ function App() {
         setCurrentUser(data);
         setSuccessMessage('Успешно!')
       })
-      .catch((err) => {
+      .catch(() => {
         if (400) {
           setErrorMessage('Пользователь с таким email уже существует.');
         } else {
@@ -207,7 +207,7 @@ function App() {
         <BrowserRouter>
           <Switch>
             <Route exact path="/">
-              <Header loggedIn={loggedIn}/>
+              <Header loggedIn={loggedIn} setErrorMessage={setErrorMessage}/>
               <Main/>
               <Footer/>
             </Route>

@@ -1,8 +1,16 @@
-import { React, useEffect, useState } from "react";
+import {React, useEffect, useState} from "react";
 import './searchForm.css';
 
 
-function SearchForm({type, searchValue, setSearchValue, isShortDurations, setIsShortDurations, onSearchCards, isResetWhenReload}) {
+function SearchForm({
+                      type,
+                      searchValue,
+                      setSearchValue,
+                      isShortDurations,
+                      setIsShortDurations,
+                      onSearchCards,
+                      isResetWhenReload
+                    }) {
 
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -55,12 +63,14 @@ function SearchForm({type, searchValue, setSearchValue, isShortDurations, setIsS
   return (
     <section className="seach">
       <form className="seach__container" onSubmit={handleSearchClick}>
-        <input className="seach__input" type="text" placeholder="Фильм" value={searchValue || ""} onChange={handleSearch} />
+        <input className="seach__input" type="text" placeholder="Фильм" value={searchValue || ""}
+               onChange={handleSearch}/>
         <button className="seach__button" title="Найти"></button>
       </form>
       <p className={`seach__error-message ${errorMessage && 'seach__error-message_visible'}`}>{errorMessage}</p>
       <div className="seach__switch">
-        <input type="checkbox" className="seach__checkbox" checked={isShortDurations} onChange={handleSwitchShortDurations} />
+        <input type="checkbox" className="seach__checkbox" checked={isShortDurations}
+               onChange={handleSwitchShortDurations}/>
         <h3 className="seach__checkbox-name">Короткометражки</h3>
       </div>
       <div className="seach__line"></div>
