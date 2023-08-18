@@ -1,7 +1,6 @@
 .profile__person {
   max-width: 411px;
-  margin: 0 auto;
-  margin-top: 123px;
+  margin: 121px auto 0;
 }
 
 @media screen and (max-width:1279px) {
